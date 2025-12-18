@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* General */
+
+.container {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+}
+
+
+/* header */
+
+header .container {
+    display: flex;
+    margin: auto;
+    place-items: center;
+    justify-content: space-between;
+    background: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    animation: anim 1.5s ease;
+}
+
+header .container a img {
+    width: 100px;
+}
+
+header ul li {
+    list-style: none;
+    display: inline;;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 20px;
+}
+
+header nav a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+header .search_bar_2 {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    width: 30px;
+}
+
+header form {
+    display: flex;
+    place-items: center;
+    display: none;
+}
+
+header form input {
+    margin-right: 20px;
+    width: 250px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 0 15px;
+    border: none;
+}
+
+header form button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+header form img {
+    width: 25px;
+}
+
+header .search_bar {
+    width: 25px;
+    cursor: pointer;
+}
+
+header .menu {
+    width: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* JavaScript_Search_Bar */
+.search_bar.response .search_bar {
+    display: none;
+}
+
+.search_bar.response form {
+    display: flex;
+    place-items: center;
+}
+
+
+.search_bar_2.reset form {
+    display: none;
+}
+
+.search_bar_2.reset header button {
+    display: none;
+}
+
+/* sections */
+
+/* showcase1 */
+
+.showcase1 {
+    background: url('Coffee_Background.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+.welcome {
+    color: #fff;
+    margin-top: 10%;
+    margin-left: 100px;
+    animation: fade 1.5s ease;
+}
+
+.welcome h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.welcome h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.welcome .btn {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 15px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* showcase2 */
+
+.showcase2 {
+    background-color: #e2d9c8;
+}
+
+.showcase2 .container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    padding: 60px;
+    text-align: center;
+}
+
+.showcase2 .coffee_type img {
+    width: auto;
+    height: 3em;
+}
+
+.showcase2 .coffee_type p {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+/* showcase3 */
+
+.showcase3 .container {
+    padding: 0 0 60px 0;
+}
+
+.special_coffee .arrow {
+    width: 12px;
+}
+
+.Left_Arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e2d9c8;
+    padding: 10px;
+    object-fit: contain;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 100px;
+}
+
+.Right_Arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e2d9c8;
+    padding: 10px;
+    object-fit: contain;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+}
+
+.showcase3 .container h1 {
+    text-align: center;
+    padding: 60px;
+    color: #2f0706;
+}
+
+.showcase3 .special_coffee {
+    display: flex;
+    place-items: center;
+    padding: 0 100px 0 100px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.showcase3 .order {
+    background-color: #ebe6dc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 270px;
+    transition: transform 300ms ease;
+}
+
+.showcase3 .order:hover {
+    transform: scale(1.05);
+}
+
+
+.showcase3 .order img {
+    aspect-ratio: 1.7/2;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.showcase3 .order h3 {
+    color: #2f0706;
+}
+
+.showcase3 .order p {
+    font-size: 13px;
+    margin: 10px 0 10px 0;
+    color: #2f0706;
+}
+
+.showcase3 .price {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.showcase3 .price h2 {
+    color: #2f0706;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.showcase3 .price .btn {
+    padding: 10px;
+    border: none;
+    background-color: #2f0706;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.showcase3 .price .btn:hover {
+    background-color: #530100;
+}
+
+/* showcase4 */
+
+.showcase4 {
+    background-color: #e2d9c8;
+    padding: 60px 0;
+}
+
+.showcase4 .container {
+    margin: auto;
+    width: 500px;
+    justify-content: space-around;
+}
+
+.showcase4 h1 {
+    font-size: clamp(1.2rem, 8vw, 3.1rem);
+    color: #2f0706;
+}
+
+.showcase4 .btn {
+    padding: 20px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2f0706;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* showcase5 */
+
+.showcase5 .container {
+    padding: 50px 0 50px 0;
+}
+
+.showcase5 .container h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.showcase5 .container .customers_rating {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.showcase5 .container .cus {
+    width: 30%;
+    background-color: #ebe6dc;
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    transition: transform 300ms ease;
+}
+
+.showcase5 .container .cus:hover {
+    transform: scale(1.05);
+}
+
+.showcase5 .container .profile {
+    margin-bottom: 20px;
+}
+
+.showcase5 .container .name {
+    display: flex;
+    place-items: center;
+}
+
+.showcase5 .container .name img {
+    width: 60px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+/* showcase6 */
+
+.showcase6 {
+    background-color: #ebe6dc;
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+.showcase6 h1, p, .showcase6 form {
+    margin-bottom: 10px;
+}
+
+.showcase6 form input[type="email"] {
+    width: 400px;
+    height: 50px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 40px;
+    color: #2f0706;
+    font-size: 15px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.showcase6 form button {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    background-color: #2f0706;
+}
+
+/* footer */
+
+footer {
+    background-color: #32281d;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+footer .logo {
+    width: auto;
+    height: 30px;
+}
+
+footer h1 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+footer p {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+footer .social img {
+    width: auto;
+    height: 15px;
+    margin-right: 10px;
+}
+
+@media (max-width: 720px) {
+
+    header .menu {
+        display: flex;
+    }
+
+    header nav {
+        display: none ;
+    }
+
+    header .search_bar {
+        margin-right: -130px;
+    }
+
+    header form {
+        position: absolute;
+        top: 80px;
+
+    }
+
+    .welcome {
+        color: #fff;
+        margin-top: 40%;
+        margin-left: 0;
+    }
+    
+    .showcase3 .special_coffee,
+    .showcase5 .container .customers_rating,
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .showcase5 .container .cus {
+        width: 100%;
+    }
+
+    .showcase6 form input[type="email"] {
+        width: 300px;
+        height: 40px;
+    }
+
+    .showcase6 form button {
+        width: 300px;
+        height: 40px;
+    }
+
+    .special_coffee .Left_Arrow,
+    .special_coffee .Right_Arrow {
+        display: none;
+    }
+
+    .showcase4 .container {
+        width: 100%;
+    }
+
+    .showcase4 {
+        padding: 20px;
+    }
+
+    .showcase2 .container {
+        width: 95%;
+        padding: 20px ;
+    }
+
+    footer .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .showcase5 .container {
+        padding: 50px 0 50px 0;
+    }
+
+    .menu.more nav {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 45vh;
+        background-color: #ffffff;
+        backdrop-filter: blur(5px);
+        padding: 40px 20px;
+        border-radius: 20px;
+        color: #2f0706;
+    }
+
+    .menu.more nav ul li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .menu.more li a {
+        color: #2f0706;
+        font-size: 20px;
+    }
+
+    .menu.more .search_bar {
+        display: block;
+        overflow: scroll;
+    }
+
+    .menu.more body {
+        backdrop-filter: blur(5px);
+    }
+}
+
+ @keyframes fade {
+     from {
+         opacity: 0;
+         transform: translateX(-40px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateX(0px);
+     }
+ }
+
+   @keyframes anim {
+      from {
+          opacity: 0;
+          transform: translateY(-50px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="Coffee_Page_Icon.png">
+</head>
+
+<body>
+
+    <div class="warpper">
+        <form action="Home_Page.html" method="get" id="loginForm">
+            <div>
+                <button type="button" class="logo"><img src="Coffee_Page_Icon.png" alt=""></button>
+            </div>
+            <h1>Login Form</h1>
+            <p>Enter your credentials to get started</p>
+            <button type="button" id="warn">Please enter both email and password</button>
+            <div class="input-box">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="Identifier" placeholder="Enter your email">
+                <i class='bx bxl-gmail'></i>
+            </div>
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" id="registerBtn">Register New Account</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let username = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let warn = document.getElementById("warn");
+
+            if (username === "" || password === "") {
+                warn.style.display = "block";
+                return false;
+            }
+            warn.style.display = "none";
+            return true;
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+
+            if (!validateForm()) {
+                e.preventDefault();
+            }
+        });
+
+        document.getElementById("registerBtn").addEventListener("click", function () {
+            if (validateForm()) {
+                alert("Proceed to registration...");
+            }
+        });
+
+        fetch("login.php", {
+            method: "POST",
+            body: new FormData(loginForm)
+        })
+            .then(res => res.text())
+            .then(data => console.log(data));
+
+    </script>
+
+</body>
+
+</html>
